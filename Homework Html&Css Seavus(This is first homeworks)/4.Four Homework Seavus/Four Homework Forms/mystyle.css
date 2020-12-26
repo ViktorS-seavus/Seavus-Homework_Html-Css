@@ -1,0 +1,27 @@
+div {
+    color: green;
+    margin: auto;
+    width: 50%;
+    border: 1px solid black;
+    padding: 0 20px 10px 20px;
+    background-image: url(./back_pic.jpg);
+    opacity: 0.8;
+}
+pre {
+    font-weight: bold;
+    font-size: large;
+    margin-left: -80px;
+}
+legend   {
+    font-weight: bold;
+    position: relative;
+}
+p, .asd   {
+    font-weight: bold;
+}
+fieldset    {
+    padding-bottom: 20px;
+}
+div:hover   {
+    opacity: 1;
+}

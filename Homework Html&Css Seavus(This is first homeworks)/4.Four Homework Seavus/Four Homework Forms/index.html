@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mystyle.css">
+    <title>Four Homework for Form's method</title>
+</head>
+<body>
+    <div>
+        <h1>Dado Lea Lunch Special</h1>
+        <pre>
+            Monday throught Friday
+            11am - 3pm
+            $9.95 plus tax
+        </pre>
+        <p>Includes sandwich, snack, and drink.</p>
+        <form action="Get/Post">
+            <fieldset>
+                <legend>Order Information</legend>
+                <label for="ussername" class="asd">Name</label>
+                <br>
+                <input type="text" name="ussername" id="ussername" placeholder="Type you'r name here">
+                <br><br>
+                <input type="radio" name="choice" value="here" id="here">
+                <label for="here">Here</label>
+                <br>
+                <input type="radio" name="choice" value="to_go" id="to_go">
+                <label for="to_go">To go</label>
+            </fieldset>
+            <fieldset>
+                <legend>Sandwiches</legend>
+                <p>Monday</p>
+                <input type="radio" name="monday" value="tomato_mozzarella" id="tomato_mozzarella">
+                <label for="tomato_mozzarella">Tomato Mozzarella</label>
+                <br>
+                <input type="radio" name="monday" value="chicken_salad" id="chicken_salad">
+                <label for="chicken_salad">Chicken Salad</label>
+                <p>Tuesday</p>
+                <input type="radio" name="tuesday" value="greek_salad_wrap" id="greek_salad_wrap">
+                <label for="greek_salad_wrap">Greek Salad Wrap</label>
+                <br>
+                <input type="radio" name="tuesday" value="toto_wrap" id="toto_wrap">
+                <label for="toto_wrap">Toto Wrap</label>
+                <p>Wednesday</p>
+                <input type="radio" name="wednesday" value="red_pepper_hummus" id="red_pepper_hummus">
+                <label for="red_pepper_hummus">Red Pepper Hummus</label>
+                <br>
+                <input type="radio" name="wednesday" roasted_turkey id="roasted_turkey">
+                <label for="roasted_turkey">Roasted Turkey</label>
+                <p>Thursday</p>
+                <input type="radio" name="thursday" value="carot_ginder_hummus_wrap" id="carot_ginder_hummus_wrap">
+                <label for="carot_ginder_hummus_wrap">Carrot-Ginder Hummus Wrap</label>
+                <br>
+                <input type="radio" name="thursday" value="egg_salad" id="egg_salad">
+                <label for="egg_salad">Egg Salad</label>
+                <p>Friday</p>
+                <input type="radio" name="friday" value="dado_wrap" id="dado_wrap">
+                <label for="dado_wrap">Dado Wrap</label>
+                <br>
+                <input type="radio" name="friday" value="tuna_salad" id="tuna_salad">
+                <label for="tuna_salad">Tuna Salad</label>
+                <hr>
+                <input type="checkbox" name="extra_choice" value="gluten_free_bread" id="gluten_free_bread">
+                <label for="gluten_free_bread">Gluten Free Bread (75¢ extra)</label>
+            </fieldset>
+            <fieldset>
+                <legend>Snack</legend>
+                <p>Snacks</p>
+                <input type="radio" name="fruit" value="apple" id="apple">
+                <label for="apple">Apple</label>
+                <br>
+                <input type="radio" name="fruit" value="banana" id="banana">
+                <label for="banana">Banana</label>
+                <br>
+                <input type="radio" name="fruit" value="potato_chips" id="potato_chips">
+                <label for="potato_chips">Potato Chips</label>
+            </fieldset>
+            <fieldset>
+                <legend>Drink</legend>
+                <label for="drinks" class="asd">Drinks</label>
+                <select name="drinks" id="drinks" title="Select one product">
+                    <option value="hot_black_tee">Hot Black Tea - Keemun</option>
+                    <option value="hot_green tee">Hot Green Tea</option>
+                    <option value="black_coffeе">Black Coffeе</option>
+                    <option value="irish_coffеe">Irish Coffеe</option>
+                    <option value="large_glass_of_beer">Large Glass of Beer</option>
+                    <option value="traditional_beer">Traditional Beer</option>
+                    <option value="soda">Soda</option>
+                    <option value="non_carbonated_juice">Non-carbonated Juice</option>
+                </select>
+                <hr>
+                    <input type="checkbox" name="extra_choice" value="large_dring" id="large_dring">
+                    <label for="large_dring">Large drink (75¢ extra)</label>
+            </fieldset>
+            <button type="submit">Place Order</button>
+        </form>
+        <br>
+
+        <!-- Како би можел да направам текстот да се гледа 100% како нормално мени, наместо да е замаглен со сликата како што е во моментов, пробувам на секаков начин и не ми успева. И ако може нешто екстра за куцање xD-->
+    </div>
+</body>
+</html>

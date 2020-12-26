@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Man Dont get Angry</title>
+    <style>
+        table   {
+            background-image: url(./Images/imagesNasa.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            outline: 2px solid black;
+            width: 31%;
+            height: 500px;;
+        }
+        table,th,td {
+            border: 2px dotted lightslategrey;
+            margin: auto;
+        }
+        caption {
+            background-color: cornsilk;
+        }
+        .start   {
+            background-image: url(./Images/start.png);
+            background-size: 49px;
+        }
+        .red    {
+            background-color: red;
+            opacity: 0.6;   
+        }
+        .blue   {
+            background-color: blue;
+            opacity: 0.6;
+        }
+        .yellow {
+            background-color: yellow;
+            opacity: 0.6;
+        }
+        .green  {
+            background-color: green;
+            opacity: 0.6;
+        }
+        .lightskyblue  {
+            background-color: lightskyblue;
+            opacity: 0.6;
+        }
+        .move   {
+            background-color: powderblue;
+            opacity: 0.6;
+            background-image: url(./Images/SpaceElevator.jpg);
+            background-position: center;
+        }
+        #mydiv {
+            position: absolute;
+            cursor: move;
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- Пробав да вгнездам Слика во Слика но не ми беше јасно и остаив на ова што е сега ... Напраив во Table,tr,td Background-image, и вметнав во td уште една повторно background-image пробував да ја најдам позицијата и големината но безуспешно. Претпоставувам дека вака е грешно на преглед во кодот. Ќе научам постепено повеќе, прв пат пробав да вметнам слика во слика мислев ќе успее.-->
+    <table>
+        <caption><strong>Tables Homework</strong></caption>
+        <tbody>
+            <tr>
+                <td class="red"></td>
+                <td class="red"></td>
+                <td colspan="2" rowspan="2"></td>
+                <td class="move"></td>
+                <td class="move"></td>
+                <td class="move start"></td>
+                <td colspan="2" rowspan="2"></td>
+                <td class="blue"></td>
+                <td class="blue"></td>
+            </tr>
+            <tr>
+                <td class="red"></td>
+                <td class="red"></td>
+                <td class="move"></td>
+                <td class="blue"></td>
+                <td class="move"></td>
+                <td class="blue"></td>
+                <td class="blue"></td>
+            </tr>
+            <tr>
+                <td rowspan="2" colspan="4"></td>
+                <td class="move"></td>
+                <td class="blue"></td>
+                <td class="move"></td>
+                <td rowspan="2" colspan="4"></td>
+            </tr>
+            <tr>
+                <td class="move"></td>
+                <td class="blue"></td>
+                <td class="move"></td>
+            </tr>
+            <tr>
+                <td class="move start"></td>
+                <td class="move"></td>
+                <td class="move"></td>
+                <td class="move"></td>
+                <td class="move"></td>
+                <td class="blue"></td>
+                <td class="move"></td>
+                <td class="move"></td>
+                <td class="move"></td>
+                <td class="move"></td>
+                <td class="move"></td>
+            </tr>
+            <tr>
+                <td class="move"></td>
+                <td class="red"></td>
+                <td class="red"></td>
+                <td class="red"></td>
+                <td class="red"></td>
+                <td></td>
+                <td class="green"></td>
+                <td class="green"></td>
+                <td class="green"></td>
+                <td class="green"></td>
+                <td class="move"></td>
+            </tr>
+            <tr>
+                <td class="move"></td>
+                <td class="move"></td>
+                <td class="move"></td>
+                <td class="move"></td>
+                <td class="move"></td>
+                <td class="yellow"></td>
+                <td class="move"></td>
+                <td class="move"></td>
+                <td class="move"></td>
+                <td class="move"></td>
+                <td class="move start"></td>
+            </tr>
+            <tr>
+                <td rowspan="2" colspan="4"></td>
+                <td class="move"></td>
+                <td class="yellow"></td>
+                <td class="move"></td>
+                <td rowspan="2" colspan="4"></td>
+            </tr>
+            <tr>
+                <td class="move"></td>
+                <td class="yellow"></td>
+                <td class="move"></td>
+            </tr>
+            <tr>
+                <td class="yellow"></td>
+                <td class="yellow"></td>
+                <td colspan="2" rowspan="2"></td>
+                <td class="move"></td>
+                <td class="yellow"></td>
+                <td class="move"></td>
+                <td colspan="2" rowspan="2"></td>
+                <td class="green"></td>
+                <td class="green"></td>
+            </tr>
+            <tr>
+                <td class="yellow"></td>
+                <td class="yellow"></td>
+                <td class="move start"></td>
+                <td class="move"></td>
+                <td class="move"></td>
+                <td class="green"></td>
+                <td class="green"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="mydiv">
+        <img src="./Images/Pion.png" alt="Pion onclick for move" style="width: 2em;" title="Draggable move">
+    </div>
+
+    <!--Java Script делот повеќе го гледав од нет и праев некој измени, и накрај се изненадив бидејчи почна да се поместува Сликата со пионот.-->
+    <script>
+        //Make the DIV element draggagle:
+        dragElement(document.getElementById("mydiv"));
+        
+        function dragElement(elmnt) {
+          var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+          if (document.getElementById(elmnt.id)) {
+            document.getElementById(elmnt.id).onmousedown = dragMouseDown;
+          } else {
+            elmnt.onmousedown = dragMouseDown;
+          }
+
+          function dragMouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // get the mouse cursor position at startup:
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            document.onmouseup = closeDragElement;
+            // call a function whenever the cursor moves:
+            document.onmousemove = elementDrag;
+          }
+        
+          function elementDrag(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // calculate the new cursor position:
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            // set the element's new position:
+            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+          }
+        
+          function closeDragElement() {
+            /* stop moving when mouse button is released:*/
+            document.onmouseup = null;
+            document.onmousemove = null;
+          }
+        }
+        </script>
+</body>
+</html>
